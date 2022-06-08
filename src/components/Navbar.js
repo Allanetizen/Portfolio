@@ -1,6 +1,6 @@
 import logo from "../logo.svg";
 
-function Navbar() {
+export default function Navbar() {
   return (
     <div className="nav">
       <header className="header">
@@ -15,4 +15,3 @@ function Navbar() {
     </div>
   );
 }
-export default Navbar;
