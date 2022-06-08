@@ -1,17 +1,26 @@
-import logo from "../logo.svg";
+// import logo from "../logo.svg";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <div className="nav">
-      <header className="header">
-        <img src={logo} className="nav-logo" alt="logo" />
-        <ul>
-          <li>About</li>
-          <li>Experience</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
-      </header>
-    </div>
+    <navbar>
+      <nav className="navbar">
+        <h1>
+          {" "}
+          <Link to="/">AK</Link>
+        </h1>
+        <div className="links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/experience">Experience</Link>
+
+          <Link to="/projects">Projects</Link>
+          <Link to="/resume"><Button variant="outlined" style={{color:"aqua"}}>Resume</Button></Link>
+
+        </div>
+      </nav>
+    </navbar>
   );
-}
+};
+export default Navbar;
